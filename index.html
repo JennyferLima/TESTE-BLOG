@@ -1,32 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>m2-entrega-blog-m2</title>
-  <link rel="stylesheet" href="./src/styles/reset.css">
-  <link rel="stylesheet" href="./src/styles/cadasLogin.css">
-  <link rel="icon" href="./src/img/favicon.jpeg" >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/paginaLogin.css">
+    <link rel="icon" href="./src/img/favicon.jpeg">
+
+    <script defer type="module" src="./src/js/loginUsuario.js"></script>
+    
+    <title>Kenzie Blog</title>
 </head>
+
 <body>
-  <div class="content_login">
-    <div class="form_content">
-      <h1>Login</h1>
-      <form action="#" class="login_form" id="formulario_de_Login">
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Senha">
-        <button type="submit" class="login_btn" id="button_de_login">
-          Login
-        </button>
-      </form>
-      <p>
-        Ainda não está cadastrado?
-        <a href="./src/pages/cadastro.html">Clique aqui</a> para cadastrar!
-      </p>
+    <div class = "container__register__login">
+        <div class = "container__form">
+            <h1>Login</h1>
+            <form action = "#" class = "login__form" id = "access__form">
+              <input type = "email" placeholder = "E-mail">
+              <input type = "password" placeholder = "Senha">
+              <button type = "submit" class = "button__login" id = "button_de_login">
+                Entrar
+              </button>
+            </form>
+            <p>
+              Primeira vez aqui?
+              <a href = "./src/pages/paginaCadastro.html">Cadastre-se agora!</a>  
+            </p>
+        </div>
     </div>
-  </div>
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script type="module" src="./src/js/Login.js"></script>
+
+    <script src = "//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
 </body>
 </html>
