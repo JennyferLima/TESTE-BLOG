@@ -1,0 +1,269 @@
+.homepage-header{
+    background-color: var(--headerColor);
+}
+
+
+.header-container{
+    max-width: var(--container-max-width);
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.perfil-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.perfil-container #perfil-name{
+    font-weight: 600;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.perfil-image{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+#logout-btn{
+    background-color: var(--btnBgColor);
+    border-radius: 15px;
+    color: white;
+    font-weight: 600;
+    border: 1px solid transparent;
+    height: 2em;
+    transition: .2s;
+    cursor: pointer;
+    width: 100px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logout-btn:hover{
+    border: 1px solid var(--btnBgColor);
+    background-color: var(--cardBgColor);
+    color: var(--btnBgColor);
+}
+
+#creating-posts-container{
+    padding: 20px 0 40px;
+    width: 100%;
+}
+
+.creating-posts-window{
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px 20px;
+    gap: 10px;
+
+}
+
+.creating-posts-window  #post-btn{
+    background-color: var(--btnBgColor);
+    border-radius: 15px;
+    padding: 5px 20px;
+    color: white;
+    font-weight: 600;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    transition: 0.2s;
+}
+.creating-posts-window  #post-btn:hover{
+    border: 1px solid var(--btnBgColor);
+    background-color: transparent;
+    color: var(--btnBgColor);
+}
+
+.creating-posts-window #post-text-area{
+    border: 2px solid var(--defaultPurple);
+    border-radius: 15px;
+    width: 100%;
+    resize: none;
+    padding: 10px;
+    height: 8em;
+    box-sizing: border-box;
+}
+
+
+#posts-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.post-card{
+    background-color: var(--cardBgColor);
+    padding: 30px 30px 10px;
+    border-radius: 25px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.post-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.card-user-image{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.card-user-btn-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.card-user-btn-container .editar-btn{
+    background-color: var(--blueBtnBg);
+    padding: 8px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+    color: white;
+}
+.card-user-btn-container .editar-btn:hover{
+    border: 1px solid var(--blueBtnBg);
+    background-color: transparent;
+    color: var(--blueBtnBg);
+}
+
+.card-user-btn-container .apagar-btn{
+    background-color: var(--redBtnBg);
+    padding: 8px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+    color: white;
+}
+
+.card-user-btn-container .apagar-btn:hover{
+    border: 1px solid var(--redBtnBg);
+    background-color: transparent;
+    color: var(--redBtnBg);
+}
+
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.user-name{
+    margin: 0;
+}
+.id-in-user-name{
+    color: gray;
+    font-size: 0.5em;
+    font-weight: 400;
+    font-style: italic;
+}
+.post-edit-area{
+    width: 90%;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 25px;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    text-align: center;
+    position: fixed;
+    box-shadow: 2px 2px 0 800vw rgba(0, 0, 0, 0.8)
+}
+
+.post-edit-area .post-content-edit-text-area{
+    width: 100%;
+    height: 9em;
+    resize: none;
+    border: 2px solid var(--defaultPurple);
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.post-edit-area .confirm-btn{
+    background-color: var(--greenBtnBg);
+}
+.post-edit-area .confirm-btn:hover{
+    background-color: transparent;
+    color: var(--greenBtnBg);
+    border: 1px solid var(--greenBtnBg);
+}
+
+.post-edit-area .cancel-btn{
+    background-color: var(--redBtnBg);
+}
+.post-edit-area .cancel-btn:hover{
+    background-color: transparent;
+    color: var(--redBtnBg);
+    border: 1px solid var(--redBtnBg);
+}
+
+.post-content{
+    width: 100%;
+    text-align: center;
+}
+
+.post-text{
+    color: var(--cardDefaultTextColor);
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.data-container{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.data-container .post-data{
+    font-size: 0.8em;
+    font-style: italic;
+    color: gray;
+}
+
+@media screen and (min-width: 768px){
+    .container{
+        max-width: 800px;
+    }
+    .post-edit-area{
+        max-width: 800px;
+    }
+
+    .card-user-btn-container{
+        max-width: 120px;
+    }
+    .post-card-container{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+    .post-content{
+        text-align: start;
+    }
+    
+}

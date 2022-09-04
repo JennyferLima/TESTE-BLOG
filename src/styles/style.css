@@ -1,0 +1,59 @@
+:root{
+  /* colors */
+  --bgColor: #454D6B;
+  --btnBgColor: #5C5D8D;
+  --headerColor: #6495ED;
+  --cardBgColor: #ECF0F1;
+  --cardDefaultTextColor: #363457;
+  --defaultPurple: #5C5D8D;
+  --blueBtnBg: #4A88DA;
+  --redBtnBg: #FF3F5B;
+  --greenBtnBg: #04AA6D;
+
+  /* general configs */
+  --container-max-width: 1080px;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: var(--bgColor);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+  padding: 15px 0;
+}
+
+.container{
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  width: 90%;
+}
+
+.btn{
+  background-color: var(--btnBgColor);
+  border-radius: 15px;
+  padding: 5px 20px;
+  color: white;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.btn:hover{
+  border: 1px solid var(--btnBgColor);
+  background-color: white;
+  color: var(--btnBgColor);
+}
+
+.hidden{
+  display: none;
+}
+.fa-solid{
+  pointer-events: none;
+}
