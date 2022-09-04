@@ -1,8 +1,8 @@
 import Api from "./api.js";
 
-const formLogin = document.querySelector(".login_form")
+const formLogin = document.querySelector(".login__form")
 
-const loginButton = document.querySelector(".login_btn")
+const loginButton = document.querySelector(".button__login")
 
 const objectValues = [...formLogin.elements]
 
