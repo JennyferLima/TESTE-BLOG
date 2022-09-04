@@ -1,9 +1,9 @@
-.homepage-header{
+.homepage__header{
     background-color: var(--headerColor);
 }
 
 
-.header-container{
+.header__container{
     max-width: var(--container-max-width);
     padding: 0 20px;
     margin: 0 auto;
@@ -12,26 +12,26 @@
     align-items: center;
 }
 
-.perfil-container{
+.profile__container{
     display: flex;
     align-items: center;
     gap: 10px;
     justify-content: center;
 }
 
-.perfil-container #perfil-name{
+.profile__container #profile__name{
     font-weight: 600;
     color: white;
     text-shadow: 1px 1px 1px black;
 }
 
-.perfil-image{
+.profile__picture{
     width: 60px;
     height: 60px;
     border-radius: 50%;
 }
 
-#logout-btn{
+#button__logout{
     background-color: var(--btnBgColor);
     border-radius: 15px;
     color: white;
@@ -47,18 +47,18 @@
     justify-content: center;
 }
 
-#logout-btn:hover{
+#button__logout:hover{
     border: 1px solid var(--btnBgColor);
     background-color: var(--cardBgColor);
     color: var(--btnBgColor);
 }
 
-#creating-posts-container{
+#creating__post__containers{
     padding: 20px 0 40px;
     width: 100%;
 }
 
-.creating-posts-window{
+.creating__post__windows{
     background-color: white;
     border-radius: 15px;
     padding: 10px 20px;
@@ -66,7 +66,7 @@
 
 }
 
-.creating-posts-window  #post-btn{
+.creating__post__windows  #button__post{
     background-color: var(--btnBgColor);
     border-radius: 15px;
     padding: 5px 20px;
@@ -79,13 +79,13 @@
     margin-top: 20px;
     transition: 0.2s;
 }
-.creating-posts-window  #post-btn:hover{
+.creating__post__windows  #button__post:hover{
     border: 1px solid var(--btnBgColor);
     background-color: transparent;
     color: var(--btnBgColor);
 }
 
-.creating-posts-window #post-text-area{
+.creating__post__windows #post__text__area{
     border: 2px solid var(--defaultPurple);
     border-radius: 15px;
     width: 100%;
@@ -96,7 +96,7 @@
 }
 
 
-#posts-container{
+#post__container{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,33 +104,33 @@
     margin-bottom: 50px;
 }
 
-.post-card{
+.post__card{
     background-color: var(--cardBgColor);
     padding: 30px 30px 10px;
     border-radius: 25px;
     width: 100%;
     box-sizing: border-box;
 }
-.post-card-container{
+.post__card__container{
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
 }
 
-.card-user-image{
+.card__user__picture{
     width: 120px;
     height: 120px;
     border-radius: 50%;
 }
 
-.card-user-btn-container{
+.card__user__button__container{
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
 }
 
-.card-user-btn-container .editar-btn{
+.card__user__button__container .button__edit{
     background-color: var(--blueBtnBg);
     padding: 8px;
     border: 1px solid transparent;
@@ -139,13 +139,13 @@
     transition: 0.2s;
     color: white;
 }
-.card-user-btn-container .editar-btn:hover{
+.card__user__button__container .button__edit:hover{
     border: 1px solid var(--blueBtnBg);
     background-color: transparent;
     color: var(--blueBtnBg);
 }
 
-.card-user-btn-container .apagar-btn{
+.card__user__button__container .button__delete{
     background-color: var(--redBtnBg);
     padding: 8px;
     border: 1px solid transparent;
@@ -155,7 +155,7 @@
     color: white;
 }
 
-.card-user-btn-container .apagar-btn:hover{
+.card__user__button__container .button__delete:hover{
     border: 1px solid var(--redBtnBg);
     background-color: transparent;
     color: var(--redBtnBg);
@@ -169,7 +169,7 @@
     gap: 10px;
 }
 
-.user-name{
+.user__name{
     margin: 0;
 }
 .id-in-user-name{
@@ -178,7 +178,7 @@
     font-weight: 400;
     font-style: italic;
 }
-.post-edit-area{
+.post__editing__area{
     width: 90%;
     background-color: white;
     padding: 20px;
@@ -193,7 +193,7 @@
     box-shadow: 2px 2px 0 800vw rgba(0, 0, 0, 0.8)
 }
 
-.post-edit-area .post-content-edit-text-area{
+.post__editing__area .post__content__editing__text__area{
     width: 100%;
     height: 9em;
     resize: none;
@@ -204,25 +204,25 @@
     margin-bottom: 15px;
 }
 
-.post-edit-area .confirm-btn{
+.post__editing__area .button__confirm{
     background-color: var(--greenBtnBg);
 }
-.post-edit-area .confirm-btn:hover{
+.post__editing__area .button__confirm:hover{
     background-color: transparent;
     color: var(--greenBtnBg);
     border: 1px solid var(--greenBtnBg);
 }
 
-.post-edit-area .cancel-btn{
+.post__editing__area .button__cancel{
     background-color: var(--redBtnBg);
 }
-.post-edit-area .cancel-btn:hover{
+.post__editing__area .button__cancel:hover{
     background-color: transparent;
     color: var(--redBtnBg);
     border: 1px solid var(--redBtnBg);
 }
 
-.post-content{
+.post__content{
     width: 100%;
     text-align: center;
 }
@@ -233,13 +233,13 @@
     margin: 0;
 }
 
-.data-container{
+.date__container{
     margin-top: 10px;
     display: flex;
     flex-direction: row-reverse;
 }
 
-.data-container .post-data{
+.date__container .post__date{
     font-size: 0.8em;
     font-style: italic;
     color: gray;
@@ -249,20 +249,20 @@
     .container{
         max-width: 800px;
     }
-    .post-edit-area{
+    .post__editing__area{
         max-width: 800px;
     }
 
-    .card-user-btn-container{
+    .card__user__button__container{
         max-width: 120px;
     }
-    .post-card-container{
+    .post__card__container{
         display: flex;
         flex-direction: row;
         gap: 20px;
         align-items: center;
     }
-    .post-content{
+    .post__content{
         text-align: start;
     }
     
