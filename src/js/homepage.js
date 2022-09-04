@@ -8,8 +8,8 @@ async function init(){
 }
 
 function atribuirEventos(){
-    const $postBtn = document.getElementById('post-btn');
-    const $postsContainer = document.getElementById('posts-container');
+    const $postBtn = document.getElementById('button__post');
+    const $postsContainer = document.getElementById('post__container');
 
     $postBtn.addEventListener('click', (e) =>{postar(e)})
     window.addEventListener('click',btnEvents);
@@ -17,26 +17,26 @@ function atribuirEventos(){
 
 async function atualizarPerfil(){
     const user = await Api.getUser(Api.getUserId())
-    const $perfilName = document.getElementById('perfil-name');
-    const $perfilImage = document.querySelector('.perfil-image');
+    const $perfilName = document.getElementById('profile__name');
+    const $perfilImage = document.querySelector('.profile__picture');
     $perfilImage.src = user.avatarUrl;
     $perfilName.innerText = user.username;
 }
 
 function btnEvents(e){
-    if (e.target.id == 'logout-btn'){
+    if (e.target.id == 'button__logout'){
         logOut(e)
     }
-    if (e.target.classList.contains('apagar-btn')){
+    if (e.target.classList.contains('button__delete')){
         apagarPost(e)
     }
-    if (e.target.classList.contains('editar-btn')){
+    if (e.target.classList.contains('button__edit')){
         openPostEdit(e)
     }
-    if (e.target.classList.contains('confirm-btn')){
+    if (e.target.classList.contains('button__confirm')){
         confirmPostEdit(e)
     }
-    if (e.target.classList.contains('cancel-btn')){
+    if (e.target.classList.contains('button__cancel')){
         cancelPostEdit(e)
     }
 }
@@ -64,7 +64,7 @@ function logOut(e){
   }
 
 async function apagarPost(e){
-    const $card = e.target.closest('.post-card');
+    const $card = e.target.closest('.post__card');
     const postId = $card.attributes.postId.value;
     let response = await Api.deletePost(postId);
     await atualizarPosts()
@@ -73,8 +73,8 @@ async function apagarPost(e){
 
 function cancelPostEdit(e){
     const $card = document.querySelector('.actual-editing-post');
-    const $postEditArea = document.querySelector('.post-edit-area');
-    const $editTextArea = document.querySelector('.post-content-edit-text-area');
+    const $postEditArea = document.querySelector('.ppost__editing__area');
+    const $editTextArea = document.querySelector('.post__content__editing__text__area');
     
     $editTextArea.value = '';
     $postEditArea.classList.add('hidden');
@@ -83,8 +83,8 @@ function cancelPostEdit(e){
 
 async function confirmPostEdit(e){
     const $card = document.querySelector('.actual-editing-post');
-    const $postEditArea = document.querySelector('.post-edit-area');
-    const $editTextArea = document.querySelector('.post-content-edit-text-area');
+    const $postEditArea = document.querySelector('.post__editing__area');
+    const $editTextArea = document.querySelector('.post__content__editing__text__area');
     
     const postId = $card.attributes.postId.value
     const textContent = $editTextArea.value;
@@ -96,9 +96,9 @@ async function confirmPostEdit(e){
 }
 
 function openPostEdit(e){
-    const $card = e.target.closest('.post-card');
-    const $postEditArea = document.querySelector('.post-edit-area');
-    const $editTextArea = document.querySelector('.post-content-edit-text-area');
+    const $card = e.target.closest('.post__card');
+    const $postEditArea = document.querySelector('.post__editing__area');
+    const $editTextArea = document.querySelector('.post__content__editing__text__area');
     const postTextContent = $card.querySelector('.post-text').innerText;
 
     
@@ -109,7 +109,7 @@ function openPostEdit(e){
 
 async function atualizarPosts(){
     let postsArr = await Api.showPostsPage();
-    const $postsContainer = document.getElementById('posts-container')
+    const $postsContainer = document.getElementById('post__container')
     $postsContainer.innerHTML = createHTML(postsArr.data, cardTemplate)
     aplicarBotoesNosPosts()
 }
@@ -123,14 +123,14 @@ function createHTML(arr, template){
 }
 
 function postar(e){
-    const $postTextArea = document.getElementById('post-text-area');
+    const $postTextArea = document.getElementById('post__text__area');
     Api.createPost($postTextArea.value);
     setTimeout(atualizarPosts, 500)
     $postTextArea.value = '';
 }
 
 function aplicarBotoesNosPosts(){
-    const $allPostsArr = [...document.querySelectorAll('.post-card')];
+    const $allPostsArr = [...document.querySelectorAll('.post__card')];
     const $correctPostsArr = $allPostsArr.filter((element, i, arr)=>{
         const postOwnerId = parseInt(element.attributes.ownerid.value)
         if (postOwnerId == Api.getUserId()) {
@@ -138,8 +138,8 @@ function aplicarBotoesNosPosts(){
         }
     })
     $correctPostsArr.forEach((element)=>{
-        const $editarBtn = element.querySelector('.editar-btn');
-        const $apagarBtn = element.querySelector('.apagar-btn');
+        const $editarBtn = element.querySelector('.button__edit');
+        const $apagarBtn = element.querySelector('.button__delete');
 
         $editarBtn.classList.remove('hidden')
         $apagarBtn.classList.remove('hidden')
@@ -149,20 +149,20 @@ function aplicarBotoesNosPosts(){
 
 function cardTemplate(obj){
     return `
-    <article class="post-card" ownerId="${obj.user.id}" postId="${obj.id}">
-        <div class="post-card-container">
-            <img class="card-user-image" src="${obj.user.avatarUrl}">
-            <div class="post-content">
-                <h2 class="user-name">${obj.user.username} <span class="id-in-user-name">(ID: ${obj.user.id})</span></h2>
+    <article class="post__card" ownerId="${obj.user.id}" postId="${obj.id}">
+        <div class="post__card__container">
+            <img class="card__user__picture" src="${obj.user.avatarUrl}">
+            <div class="post__content">
+                <h2 class="user__name">${obj.user.username} <span class="id-in-user-name">(ID: ${obj.user.id})</span></h2>
                 <p class="post-text">${obj.content}</p>
             </div>
         </div>
-        <div class="card-user-btn-container">
-            <button class="editar-btn hidden"><i class="fa-solid fa-pencil"></i></button>
-            <button class="apagar-btn hidden"><i class="fa-solid fa-trash"></i></button>
+        <div class="card__user__button__container">
+            <button class="button__edit hidden"><i class="fa-solid fa-pencil"></i></button>
+            <button class="button__delete hidden"><i class="fa-solid fa-trash"></i></button>
         </div>
-        <div class="data-container">
-            <span class="post-data">${formatPostDate(obj.createdAt)}</span>
+        <div class="date__container">
+            <span class="post__date">${formatPostDate(obj.createdAt)}</span>
         </div>
     </article>
     `
