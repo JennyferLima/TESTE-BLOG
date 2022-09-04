@@ -34,7 +34,7 @@ header{
   width: 90%;
 }
 
-.btn{
+.button{
   background-color: var(--btnBgColor);
   border-radius: 15px;
   padding: 5px 20px;
@@ -45,7 +45,7 @@ header{
   transition: .2s;
 }
 
-.btn:hover{
+.button:hover{
   border: 1px solid var(--btnBgColor);
   background-color: white;
   color: var(--btnBgColor);
