@@ -4,55 +4,63 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KenzieSocial: Feed</title>
+  
+  <link rel="icon" href="../img/favicon.jpeg">
+  
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/homepage.css">
   <script src="https://kit.fontawesome.com/0672e7305c.js" crossorigin="anonymous"></script>
-  <link rel="icon" href="../img/favicon.jpeg" >
+  
+
+  <script defer src="../js/api.js" type="module"></script>
+  <script defer src="../js/homepage.js" type="module"></script>
+
+  <title>Feed - KenzieSocial</title>
 </head>
+
 <body>
-  <header class="homepage-header">
-    <div class="header-container">
-      <div class="perfil-container">
-        <img class="perfil-image" src="./src/img/test.jpg">
-        <span id="perfil-name">Nome do perfil aqui</span>
+  <header class="homepage__header">
+    <div class="header__container">
+      <div class="profile__container">
+        <img class="profile__picture" src="./src/img/test.jpg">
+        <span id="profile__name">Nome do perfil aqui</span>
       </div>
-      <button id="logout-btn">Logout</button>
+      <button id="button__logout">Logout</button>
     </div>
   </header>
   <main>
       <div class="container">
-      <div class="post-edit-area hidden">
-          <textarea class="post-content-edit-text-area" placeholder="Digite aqui..."></textarea>
-          <button class="btn confirm-btn"><i class="fa-solid fa-circle-check"></i></button>
-          <button class="btn cancel-btn"><i class="fa-solid fa-ban"></i></button>
+      <div class="post__editing__area hidden">
+          <textarea class="post__content__editing__text__area" placeholder="Digite aqui..."></textarea>
+          <button class="button button__confirm"><i class="fa-solid fa-circle-check"></i></button>
+          <button class="button button__cancel"><i class="fa-solid fa-ban"></i></button>
       </div>
-        <section id="creating-posts-container">
-          <div class="creating-posts-window">
-            <textarea id="post-text-area" role="textbox" placeholder="How are you feeling?"></textarea>
-            <button class="btn" id="post-btn">post</button>
+        <section id="creating__post__containers">
+          <div class="creating__post__windows">
+            <textarea id="post__text__area" role="textbox" placeholder="How are you feeling?"></textarea>
+            <button class="button" id="button__post">post</button>
           </div>
         </section>
-        <section id="posts-container">
-          <!-- <article class="post-card">
-            <div class="post-card-container">
-              <img class="card-user-image" src="./src/img/test.jpg">
-              <h2 class="user-name">exemplo usuario 1</h2>
-              <p class="post-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis officiis culpa fugit labore praesentium dolor laborum odit, porro optio expedita dolorem inventore quidem tempore cum accusamus eum aut? Reiciendis, quo!</p>
+        <section id="post__container">
+          <!-- <article class="post__card">
+            <div class="post__card__container">
+              <img class="card__user__picture" src="./src/img/test.jpg">
+              <h2 class="user__name">exemplo usuario 1</h2>
+              <p class="post__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis officiis culpa fugit labore praesentium dolor laborum odit, porro optio expedita dolorem inventore quidem tempore cum accusamus eum aut? Reiciendis, quo!</p>
             </div>
-            <div class="card-user-btn-container">
-              <button class="editar-btn">Editar</button>
-              <button class="apagar-btn">Apagar</button>
+            <div class="card__user__button__container">
+              <button class="button__edit">Editar</button>
+              <button class="button__delete">Apagar</button>
             </div>
-            <div class="data-container">
-              <span class="post-data">2022/09/09</span>
+            <div class="date__container">
+              <span class="post__date">2022/09/09</span>
             </div>
           </article> -->
         </section>
     </div>
   </main>
+
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="../js/api.js" type="module"></script>
-  <script src="../js/homepage.js" type="module"></script>
+
 </body>
 </html>
