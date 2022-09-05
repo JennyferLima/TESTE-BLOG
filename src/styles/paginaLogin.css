@@ -22,7 +22,6 @@ body {
     flex-direction: column;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.363);
     border-radius: 10px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
   }
@@ -92,10 +91,10 @@ body {
     font-family: inherit;
     font-weight: 500;
     color: #fff;
-    background-color: #edbc64;
     cursor: pointer;
     font-size: 18px;
     margin-top: 15px;
+    letter-spacing: 4px;
   }
   
   .button__login:hover {
@@ -122,20 +121,14 @@ body {
   }
   
   .button__login::after {
-    background-color: #edbc64;
+    background-color: #000;
   }
   
   .button__login:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
   }
-  /* .button__login {
-    width: 132px;
-    height: 42px;
-    background: #edbc64;
-    border-radius: 5px;
-   
-  } */
+
   .container__form p,
   a {
     color: #fff;
