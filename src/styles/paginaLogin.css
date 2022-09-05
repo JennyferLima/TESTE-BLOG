@@ -176,7 +176,9 @@ body {
   a {
     color: #fff;
     text-align: center;
-    width: 90%;
+    width: 70%;
+    font-size: 14.5px;
+}
   }
   @media (min-width: 500px) {
     .container__form {
