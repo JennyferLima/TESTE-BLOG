@@ -91,7 +91,7 @@ body {
     border: none;
     font-family: inherit;
     font-weight: 500;
-    color: #fff;
+    color: rgba(0, 0, 0, .5);
     cursor: pointer;
     font-size: 18px;
     margin-top: 15px;
