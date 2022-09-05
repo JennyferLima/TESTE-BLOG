@@ -5,6 +5,42 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+.line{
+    border-right: 2px solid rgba(0, 0, 0, .5);
+    color: rgba(0, 0, 0, .5);
+    font-family: Roboto;
+    font-size: 1.75rem;
+    text-align: center;
+    margin: 0 auto;
+    white-space: nowrap; 
+    overflow: hidden;
+}
+
+.typing-animation{
+    animation:
+        blinkCursor 500ms steps(28) infinite normal, 
+        typing 4s steps(28) 1s normal both;
+
+}
+
+@keyframes typing{
+    from{
+        width: 0;
+    }
+    to{
+        width: 9em;
+    }
+}
+
+@keyframes blinkCursor{
+    from{
+        border-right-color: rgba(0, 0, 0, .5);
+    }
+    to{
+        border-right-color: transparent;
+    }
+}
   .container__register__login {
     width: 100vw;
     height: 100vh;
