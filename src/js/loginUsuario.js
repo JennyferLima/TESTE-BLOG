@@ -13,20 +13,8 @@ export default class Login {
             password: objectValues[1].value
         }
         const response = await Api.login(objectForm)
-        //localStorage.setItem("@kenzie-blog:token", response.token)
-        /* if (response.userId) {
-            const userData = await Api.getUserId(response.userId)
-            localStorage.setItem("@kenzie-blog:avatarUrl", userData.avatarUrl)
-            localStorage.setItem("@kenzie-blog:username", userData.username)
-            location.replace("./src/pages/blog.html")
-        } else {
-            Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: `${response.message}!`,
-            })
-        } */
-        console.log('funfando')
+
+        console.log('funcionando')
         return response
     }
 }
